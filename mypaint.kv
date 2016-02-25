@@ -1,0 +1,17 @@
+#:kivy 1.9.1
+
+<MainWidget>:
+	paint_canvas: draw_area
+
+	PaintCanvas:
+		id: draw_area
+        center_y: root.top - (root.width*0.9)/2 - (root.width*0.05)
+        center_x: root.center_x + (root.width*0.9)/2
+        size: root.width*0.9, root.width*0.9
+
+<PaintCanvas>:
+	canvas:
+        Rectangle:
+			pos: self.pos
+			size: self.size
+		
